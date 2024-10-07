@@ -1,11 +1,197 @@
----
-title: Welcome to My Site
-description: This is the homepage of my website.
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+        .centered {
+            text-align: center;
+        }
+        .left-half {
+            float: left;
+            width: 50%;
+        }
+        .right-half {
+            float: right;
+            width: 50%;
+        }
+        .clear {
+            clear: both;
+        }
+        /* Home Section */
+        #home {
+            background-color: #f4f4f4;
+        }
+        #home h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        #home a {
+            font-size: 1.2em;
+            color: blue;
+            text-decoration: none;
+        }
+        /* Skills Section */
+        #skills {
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #skills img {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        /* Education, Projects, Experience Section */
+        .text-section {
+            text-align: center;
+        }
+        .text-section h2 {
+            margin-bottom: 20px;
+        }
+        .text-section p {
+            font-size: 1.2em;
+        }
+        /* Contact Section */
+        #contact {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
 
-<h1> I'm in the house</h1>
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-# Hello, World!
+<!-- Home Section -->
+<section id="home" class="container">
+    <div class="left-half centered">
+        <h1>Your Name</h1>
+        <a href="resume.pdf" target="_blank">View Resume</a>
+    </div>
+    <div class="right-half centered">
+        <img src="your-photo.jpg" alt="Your Photo" style="border-radius: 50%; width: 250px; height: 250px;">
+    </div>
+    <div class="clear"></div>
+</section>
 
-Welcome to my GitHub Pages site. This site uses the Cayman theme with a customized layout.
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container centered">
+        <img src="skill1.png" alt="Skill 1">
+        <img src="skill2.png" alt="Skill 2">
+        <img src="skill3.png" alt="Skill 3">
+        <img src="skill4.png" alt="Skill 4">
+        <!-- Add more images as needed -->
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="text-section">
+    <h2>Education</h2>
+    <p>Bachelor of Science in Computer Systems Engineering, University Name</p>
+    <p>Master of Science in Advanced Computing, University Name</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="text-section">
+    <h2>Projects</h2>
+    <p>Project 1: Brief description of your project.</p>
+    <p>Project 2: Brief description of your project.</p>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="text-section">
+    <h2>Experience</h2>
+    <p>Job Title at Company Name</p>
+    <p>Brief description of your role and achievements.</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
